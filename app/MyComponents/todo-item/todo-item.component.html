@@ -1,0 +1,27 @@
+<!-- <div class="my-3">
+    <h5 [ngClass]="{'strike': !todo.active}">{{todo.title}}</h5>
+    
+        <p [ngClass]="{'strike': !todo.active}">{{todo.desc}}</p>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="todo{{i}}" (click)="onCheckboxClick(todo)"
+                    [checked]="!todo.active">
+                <label class="form-check-label" for="todo{{i}}">Done</label>
+            </div>
+            <button class="btn btn-sm btn-danger" (click)="onClick(todo)">Delete</button>
+</div> -->
+<div class="row d-flex ">
+    <div class="col-sm-4 p-2 flex ">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title" [ngClass]="{'strike': !todo.active}">{{todo.title}}</h5>   <! --ngClass is use for the line-through-->
+                <p class="card-text" [ngClass]="{'strike': !todo.active}">{{todo.desc}}</p>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="todo{{i}}" (click)="onCheckboxClick(todo)"
+                        [checked]="!todo.active">
+                    <label class="form-check-label" for="todo{{i}}">Done</label>
+                </div>
+                <button class="btn btn-sm btn-danger" (click)="onClick(todo)">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
